@@ -12,14 +12,16 @@
     <title>Document</title>
   </head>
   <body>
-    <nav class="navbar bg-primary">
+    <nav class="navbar bg-warning p-3">
       <div class="container">
         <ul class="nav navbar-nav">
           <li>
-            <a class="navbar-brand" href="#"></a>
-            <a class="navbar-link" href="#">Home</a>
-            <a class="navbar-link" href="#">About</a>
-            <a class="navbar-link" href="#">Contact</a>
+            <a class="navbar-brand" href="#">PORTFOLIO</a>
+            <a class="navbar-link" href="{% url 'index' %}">Home</a>
+            <a class="navbar-link" href="{% url 'myPortfolio:about'%}">About</a>
+            <a class="navbar-link" href="{% url 'myPortfolio:contact'%}"
+              >Contact</a
+            >
           </li>
         </ul>
       </div>

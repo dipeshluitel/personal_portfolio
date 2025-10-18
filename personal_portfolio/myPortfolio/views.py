@@ -8,7 +8,7 @@ def about(request):
     return render(request,'myPortfolio/about_me.html')
 
 
-def projects(request):
+def project(request):
     return render(request,'myPortfolio/projects..html')
 
 def contact(request):
