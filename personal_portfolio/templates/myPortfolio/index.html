@@ -1,1 +1,19 @@
-{% extends 'myPortfolio/base.html' %} {% block body_block %} {% endblock %}
+<!DOCTYPE html>
+{% extends 'myPortfolio/base.html' %} {% block body_block %}
+<section
+  class="hero d-flex align-items-center text-center bg-light"
+  style="height: 100vh"
+>
+  <div class="container">
+    <h1 class="display-4 fw-bold">
+      Hi, I'm <span class="text-primary">Dipesh Luitel</span>
+    </h1>
+    <p class="lead mt-3">An aspiring Django Developer & Python Enthusiast</p>
+    <a
+      href="{% url 'myPortfolio:contact' %}"
+      class="btn btn-primary btn-lg mt-4"
+      >Get In Touch</a
+    >
+  </div>
+</section>
+{% endblock %}

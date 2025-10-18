@@ -1,0 +1,9 @@
+.navbar a {
+  color: white !important;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: #000000 !important;
+  text-decoration: underline;
+}
