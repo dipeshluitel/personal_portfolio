@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from myPortfolio.forms import GuestForm
 
 # Create your views here.
 def index(request):
@@ -9,10 +10,23 @@ def about(request):
 
 
 def project(request):
-    return render(request,'myPortfolio/projects..html')
+    return render(request,'myPortfolio/projects.html')
 
 def contact(request):
     contacted = False
 
+    if request.method == "POST":
+        guest_form = GuestForm(data=request.POST)
 
-    return render(request,'myPortfolio/contact.html')
+        if guest_form.is_valid():
+            guest = guest_form.save()
+            guest.save()
+
+            contacted = True
+        else:
+            print(guest_form.errors)
+    
+    else:
+        guest_form = GuestForm()
+
+    return render(request,'myPortfolio/contact.html', {'guest_form':guest_form})
