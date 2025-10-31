@@ -1,7 +1,20 @@
 <!DOCTYPE html>
 {% extends 'myPortfolio/base.html' %} {% block body_block %}
-<form method="post">
-  {% csrf_token %} {{guest_form.as_p}}
-  <input type="submit" class="btn btn-primary" value="Get In Touch" />
-</form>
+<div class="container">
+  <div class="formLayout">
+    <form method="post">
+      {% csrf_token %}
+      <div class="input-group">
+        {{guest_form.firstname.label_tag}} {{guest_form.firstname}}
+      </div>
+      <div class="input-group">
+        {{guest_form.lastname.label_tag}} {{guest_form.lastname}}
+      </div>
+      <div class="input-group">
+        {{guest_form.email.label_tag}} {{guest_form.email}}
+      </div>
+      <input type="submit" class="sub-btn" value="Get In Touch" />
+    </form>
+  </div>
+</div>
 {% endblock %}
