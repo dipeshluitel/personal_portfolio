@@ -10,7 +10,7 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="{% static 'css/mystyle.css' %}" />
+    <link rel="stylesheet" href="{% static 'myPortfolio/css/mystyle.css' %}" />
     <title>{%block title %}{% endblock %}</title>
   </head>
   <body>
@@ -35,7 +35,14 @@
         </li>
       </ul>
       <ul class="nav navbar-right">
-        <li><a class="navbar-brand" href="">RESUME</a></li>
+        <li>
+          <a
+            class="navbar-brand"
+            href="{% static 'myPortfolio/docs/resume.pdf'%}"
+            target="_blank"
+            >DIPESH LUITEL</a
+          >
+        </li>
       </ul>
     </nav>
     {% block body_block %} {% endblock %}
