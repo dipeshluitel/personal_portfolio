@@ -7,7 +7,14 @@
 .navbar a:hover {
   color: #000000 !important;
 }
-
+.home-main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
 .formLayout {
   background: rgb(13, 110, 253);
   backdrop-filter: blur(15px);
@@ -69,4 +76,12 @@
   background: rgb(13, 110, 253);
   color: #fff;
   border: 1px solid black;
+}
+
+.about-main {
+  margin-top: 10px !important;
+}
+
+.pp-size {
+  max-width: 300px;
 }
