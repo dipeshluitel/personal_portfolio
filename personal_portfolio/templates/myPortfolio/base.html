@@ -17,7 +17,7 @@
     <nav class="navbar bg-primary p-3" data-bs-theme="dark">
       <ul class="nav navbar-nav">
         <li>
-          <a class="navbar-brand" href="#">PORTFOLIO</a>
+          <a class="navbar-brand" href="#">PERSONAL-PORTFOLIO</a>
           <a class="navbar-link text-white" href="{% url 'index' %}">Home</a>
           <a class="navbar-link text-white" href="{% url 'myPortfolio:about'%}"
             >About</a
@@ -33,6 +33,9 @@
             >Contact</a
           >
         </li>
+      </ul>
+      <ul class="nav navbar-right">
+        <li><a class="navbar-brand" href="">RESUME</a></li>
       </ul>
     </nav>
     {% block body_block %} {% endblock %}
