@@ -14,10 +14,59 @@
     <title>{%block title %}{% endblock %}</title>
   </head>
   <body>
-    <nav class="navbar bg-primary p-3" data-bs-theme="dark">
+    <nav class="navbar bg-primary p-3">
       <ul class="nav navbar-nav">
         <li>
-          <a class="navbar-brand" href="#">PERSONAL-PORTFOLIO</a>
+          <!-- Brand Name Trigger -->
+          <a
+            class="navbar-brand"
+            href="#"
+            data-bs-toggle="modal"
+            data-bs-target="#profileChoiceModal"
+          >
+            Dipesh Luitel
+          </a>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="profileChoiceModal"
+            tabindex="-1"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                  <h5 class="modal-title">Visit My Profile</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                  ></button>
+                </div>
+                <div class="modal-body text-center">
+                  <p>Where would you like to visit?</p>
+                  <div class="d-flex justify-content-center gap-3 mt-3">
+                    <a
+                      href="https://github.com/dipeshluitel"
+                      target="_blank"
+                      class="btn btn-dark"
+                    >
+                      GitHub
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/in/dipeshluitel"
+                      target="_blank"
+                      class="btn btn-primary"
+                    >
+                      LinkedIn
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <a class="navbar-link text-white" href="{% url 'index' %}">Home</a>
           <a class="navbar-link text-white" href="{% url 'myPortfolio:about'%}"
             >About</a
@@ -40,7 +89,7 @@
             class="navbar-brand"
             href="{% static 'myPortfolio/docs/resume.pdf'%}"
             target="_blank"
-            >DIPESH LUITEL</a
+            >View Resume</a
           >
         </li>
       </ul>

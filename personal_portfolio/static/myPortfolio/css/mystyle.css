@@ -8,7 +8,7 @@
   color: #000000 !important;
 }
 .home-main {
-  height: 100vh;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,4 +84,9 @@
 
 .pp-size {
   max-width: 300px;
+}
+
+.modal-body a:hover {
+  transform: translateY(-2.5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
