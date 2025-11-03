@@ -9,5 +9,5 @@ class GuestForm(forms.ModelForm):
         widgets={
             'firstname': forms.TextInput(attrs={'class':'form-input'}),
             'lastname': forms.TextInput(attrs={'class':'form-input'}),
-            'email': forms.TextInput(attrs={'class':'form-input'}),
+            'email': forms.TextInput(attrs={'class':'form-input', 'placeholder':'someone@mail.com'}),
         }
