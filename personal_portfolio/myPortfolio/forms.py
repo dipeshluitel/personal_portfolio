@@ -1,6 +1,9 @@
 from django import forms
 from myPortfolio.models import Guest
 
+CHOICES = [
+    ('', 'Select an option'),
+]
 
 class GuestForm(forms.ModelForm):
     class Meta():
@@ -11,4 +14,5 @@ class GuestForm(forms.ModelForm):
             'lastname': forms.TextInput(attrs={'class':'form-input'}),
             'email': forms.TextInput(attrs={'class':'form-input', 'placeholder':'someone@mail.com'}),
             'content': forms.Textarea(attrs={'class':'form-input form-text-input', 'placeholder':'Enter Additional Message if necessary'}),
+            'dropdown': forms.Select(attrs={'class':'form-input drop-text'})
         }
