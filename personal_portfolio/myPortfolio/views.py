@@ -24,11 +24,11 @@ def contact(request):
             guest.save()
 
             contacted = True
-            redirect('modal')
+            guest_form=GuestForm()
         else:
             print(guest_form.errors)
     
     else:
         guest_form = GuestForm()
 
-    return render(request,'myPortfolio/contact.html', {'guest_form':guest_form,'current_year':datetime.now().year})
+    return render(request,'myPortfolio/contact.html', {'guest_form':guest_form,'current_year':datetime.now().year,'contacted':contacted})

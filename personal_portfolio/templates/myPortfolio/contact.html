@@ -1,6 +1,24 @@
 <!DOCTYPE html>
 {% extends 'myPortfolio/base.html' %} {% block title %} Contact | Portfolio
 {%endblock%} {% block body_block %}
+<div class="modal fade" id="displaystatus" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title">Thank-You!</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+        ></button>
+      </div>
+      <div class="modal-body text-center">
+        <p>Your Contact Information have been received</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="container">
   <div class="formLayout">
     <form method="post">
@@ -20,8 +38,18 @@
       <div class="input-group">
         {{guest_form.content.label_tag}} {{guest_form.content}}
       </div>
-      <input type="submit" class="sub-btn" value="Get In Touch" />
+      <input
+        type="submit"
+        class="sub-btn"
+        value="Get In Touch"
+      />
     </form>
   </div>
 </div>
+{% if contacted %}
+<script>
+  window.showThankYouModal = true;
+</script>
+{% endif %}
+
 {% endblock %}
