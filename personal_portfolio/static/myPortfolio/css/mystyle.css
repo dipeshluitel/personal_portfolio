@@ -1,3 +1,16 @@
+html,body{
+  height: 100%;        
+  margin: 0;
+  padding: 0;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main{
+  flex: 1;
+}
 .navbar a {
   color: white !important;
   text-decoration: none;
@@ -8,7 +21,7 @@
   color: #000000 !important;
 }
 .home-main {
-  height: 80vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,12 +113,17 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 .footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   background-color:  rgb(13, 110, 253);
   color: #fff;
   text-align: center;
   padding: 20px 10px;
-  margin-top: 40px;
+  /* margin-top: 40px; */
   border-top: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 1000;
 }
 
 .footer a {
@@ -120,4 +138,18 @@
 .footer-container {
   max-width: 900px;
   margin: auto;
+}
+.main-project-area{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 50vh;
+  margin: 100px auto 40px;
+  background-color: #c9a1a1;
+}
+.project-preview{
+  display: flex;
+  gap: 250px;
+  list-style: none;
 }
