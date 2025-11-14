@@ -61,10 +61,6 @@ body{
   transition: 0.3s;
 }
 
-/* .form-input::placeholder {
-  color: rgba(255, 255, 255, 0.7);
-} */
-
 .form-input:focus {
   background: rgba(255, 255, 255, 0.4);
   box-shadow: 0 0 5px #fff;
@@ -134,16 +130,11 @@ body{
   margin: auto;
 }
 .main-project-area{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80%;
-  height: 100vh;
-  margin: 100px auto 40px;
-  background-color: #c9a1a1;
+  width: 50%;
+  margin: 100px auto;
+  background-color: rgb(13, 110, 253);
 }
-.project-preview{
-  display: flex;
-  gap: 250px;
-  list-style: none;
+.main-project-area a{
+  text-decoration: none;
+  color: #000000;
 }
