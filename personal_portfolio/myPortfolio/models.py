@@ -9,8 +9,8 @@ class Category(models.Model):
         return self.name
 
 class Guest(models.Model):
-    firstname = models.CharField(max_length=15,blank=False, verbose_name='enter your name')
+    firstname = models.CharField(max_length=15,blank=False)
     lastname = models.CharField(max_length=15,blank=False)
     email = models.EmailField(max_length=256,blank=False)
     content = models.TextField(verbose_name='Additional Message',blank=True)
-    dropdown = models.ForeignKey(Category, on_delete=models.CASCADE,)
+    dropdown = models.ForeignKey(Category, on_delete=models.CASCADE,default="Select Your Issue", verbose_name="Category")
