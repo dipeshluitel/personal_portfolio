@@ -130,11 +130,29 @@ body{
   margin: auto;
 }
 .main-project-area{
-  width: 50%;
-  margin: 100px auto;
-  background-color: rgb(13, 110, 253);
+  width: 80%;
+  margin: 200px auto;
+  padding: 40px;
+  background-color: rgba(13, 109, 253, 0.291);
+  border-radius: 20px;
 }
 .main-project-area a{
   text-decoration: none;
   color: #000000;
+}
+.main-project-area a img:hover{
+  border: solid rgba(255, 255, 255, 0.757);
+  box-shadow: 0 0 5px #fff;
+  transition: 0.15s;
+  transform: translateY(-10px);
+}
+.main-project-area p{
+  color: #000000;
+  text-align: center;
+  user-select: none;
+}
+.main-project-area a img{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
 }

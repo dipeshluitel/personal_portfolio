@@ -1,10 +1,13 @@
-<!DOCTYPE html>{% extends 'myPortfolio/base.html' %} {% block title %} Projects
-| Portfolio {%endblock%}{% block body_block %} 
+<!DOCTYPE html>
+{% extends 'myPortfolio/base.html' %} 
+{% load static %}{% block title %}
+ Projects | Portfolio {%endblock%}{% block body_block %} 
 <div class="about-main">
     <div class="row main-project-area ">
-        <div class="col-6 col-md-4"><a href="">TO-Do App</a></div>
-        <div class="col-6 col-md-4"><a href=""> Ecommerce-Sales-Trend-Analysis </a></div>
-        <div class="col-6 col-md-4"><a href="">Admin controlled Blog</a></div>
+        <div class="col-6 col-md-3"><a href="https://github.com/dipeshluitel/ToDoList" target="_blank"><img src="{% static 'myPortfolio/images/todoApp.png' %}" alt=""></a> <p>To-Do List</p></div>
+        <div class="col-6 col-md-3"><a href="https://github.com/dipeshluitel/personal_portfolio" target="_blank"><img src="{% static 'myPortfolio/images/portfolio.png' %}" alt=""></a><p>Personal Portfolio Site</p></div>
+        <div class="col-6 col-md-3"><a href="https://github.com/dipeshluitel/Ecommerce-Sales-Trend-Analysis" target="_blank"> <img src="{% static 'myPortfolio/images/ecom.png' %}" alt=""> </a><p>Sales Trend Analysis</p></div>
+        <div class="col-6 col-md-3"><a href="https://github.com/dipeshluitel/Blog" target="_blank"><img src="{% static 'myPortfolio/images/blog.png' %}" alt=""> </a><p>Blog Site</p></div>
     </div>
 </div>
 {%endblock %}
